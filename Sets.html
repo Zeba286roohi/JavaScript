@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of sets</h3>
+    <script>
+    //create a set
+        let numbers=new Set();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(2);
+        console.log(numbers)
+    //has method
+        let fruits=new Set(['apple','mango','banana']);
+        console.log(fruits.has('apple'));
+        console.log(fruits.has('kiwi'));
+    //checking a duplicate values
+        let num=new Set([1,2,3,3,4,5,5]);
+        let res=Array.from(num);
+       // let res=[...num]
+        console.log(res)
+        
+    </script>
+</body>
+</html>

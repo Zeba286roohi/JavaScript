@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top,#1a00ad,#8d0483);
+        }
+        .clock{
+            top: 50%;
+            left: 50%;
+            background: transparent;
+            box-shadow: 0px 3px 15px rgba(113,115,119,0.5);
+            border-radius: 10%;
+            color: black;
+            font-size: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+            border: 1px solid black ;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a program of Digital clock -->
+    <div class="clock" id="digitalclock" onload="digiclock()">
+      
+    </div>
+    <script>
+        function digiclock(){
+            let date=new Date();
+            let h=date.getHours()
+            let m=date.getMinutes()
+            let s=date.getSeconds()
+            let p="AM"
+            if(h==0){
+                h=12;
+            }
+            if(h>12){
+                h-=12
+                p="PM"
+            }
+            h=(h<10)? "0" + h : h;
+            m=(m<10)? "0" + m : m;
+            s=(s<10)? "0" + s : s;
+            let t=h+ " : " + m + " : " + s + " " + p;
+            document.getElementById("digitalclock").innerText=t;
+            document.getElementById("digitalclock").textContent=t;
+            setTimeout(digiclock,1000)            
+        }
+        digiclock()
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Rating</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .card{
+            border:1px solid #009;
+            background-color: rgb(93, 184, 215);
+            border-radius: 20px;
+            width:300px;
+            padding:10px;
+            text-align: center;
+            margin-left: 500px;
+        }
+        .star{
+            font-size: 30px;
+        }
+        .star1{
+            font-size: 30px;
+        }
+        .star2{
+            font-size: 30px;
+        }
+        .one,.two,.three,.four,.five{
+            color:rgb(196, 173, 46);
+        }
+    </style>
+</head>
+<body>
+    <h1>RESTAURANT RATING</h1>
+    <div class="card">
+        <h2>Taste and serving</h2>
+        <span onclick="rate(1)" class="star">★</span> 
+        <span onclick="rate(2)" class="star">★</span> 
+        <span onclick="rate(3)" class="star">★</span> 
+        <span onclick="rate(4)" class="star">★</span> 
+        <span onclick="rate(5)" class="star">★</span> 
+        <h3 id="output">Rating is: 0/5</h3> 
+        <br>
+        <h2>Ambience</h2>
+        <span onclick="rateamb(1)" class="star1">★</span> 
+        <span onclick="rateamb(2)" class="star1">★</span> 
+        <span onclick="rateamb(3)" class="star1">★</span> 
+        <span onclick="rateamb(4)" class="star1">★</span> 
+        <span onclick="rateamb(5)" class="star1">★</span> 
+        <h3 id="output1">Rating is: 0/5</h3> 
+        <br>
+        <h2>cleanliness</h2>
+        <span onclick="ratecl(1)" class="star2">★</span> 
+        <span onclick="ratecl(2)" class="star2">★</span> 
+        <span onclick="ratecl(3)" class="star2">★</span> 
+        <span onclick="ratecl(4)" class="star2">★</span> 
+        <span onclick="ratecl(5)" class="star2">★</span> 
+        <h3 id="output2">Rating is: 0/5</h3> 
+    </div>
+    <script>
+        let stars=document.getElementsByClassName('star');
+        let result=document.getElementById('output');
+        function rate(n){
+            rem()
+            for (let i = 0; i < n; i++) { 
+                if (n == 1) cls = "one"; 
+                else if (n == 2) cls = "two"; 
+                else if (n == 3) cls = "three"; 
+                else if (n == 4) cls = "four"; 
+                else if (n == 5) cls = "five"; 
+                stars[i].className = "star " + cls; 
+            } 
+            result.innerText = "Rating is: " + n + "/5"; 
+        }
+        function rem(){
+            let i = 0; 
+            while (i < 5) { 
+               stars[i].className = "star"; 
+               i++; 
+            }
+        }
+        let star=document.getElementsByClassName('star1');
+        let result1=document.getElementById('output1');
+        function rateamb(n){
+            remo()
+            for (let i = 0; i < n; i++) { 
+                if (n == 1) cls = "one"; 
+                else if (n == 2) cls = "two"; 
+                else if (n == 3) cls = "three"; 
+                else if (n == 4) cls = "four"; 
+                else if (n == 5) cls = "five"; 
+                star[i].className = "star1 " + cls; 
+            } 
+            result1.innerText = "Rating is: " + n + "/5"; 
+        }
+        function remo(){
+            let k = 0; 
+            while (k < 5) { 
+               star[k].className = "star1"; 
+               k++; 
+            }
+        }
+        let sta=document.getElementsByClassName('star2');
+        let result2=document.getElementById('output2');
+        function ratecl(n){
+            remov()
+            for (let i = 0; i < n; i++) { 
+                if (n == 1) cls = "one"; 
+                else if (n == 2) cls = "two"; 
+                else if (n == 3) cls = "three"; 
+                else if (n == 4) cls = "four"; 
+                else if (n == 5) cls = "five"; 
+                sta[i].className = "star2 " + cls; 
+            } 
+            result2.innerText = "Rating is: " + n + "/5"; 
+        }
+        function remov(){
+            let j = 0; 
+            while (j < 5) { 
+               sta[j].className = "star2"; 
+               j++; 
+            }
+        }
+    </script>
+</body>
+</html>

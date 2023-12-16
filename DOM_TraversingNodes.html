@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Dom traversing nodes</h3>
+    <div id="parentElement">
+    <p>First Child</p>
+    <span>Second Child</span>
+    <em>Last child</em>
+</div>
+<script>
+    var element=document.getElementById('parentElement')
+    console.log(element)
+    var parent=element.parentNode;
+    console.log(parent)
+    var child=element.childNodes;
+    console.log(child)
+    var firstchild=element.firstChild;
+    console.log(firstchild)
+    var lastchild=element.lastChild;
+    console.log(lastchild)//this includes text nodes
+    var nextsib=element.nextSibling;
+    console.log(nextsib)
+    var prevsib=element.previousSibling
+    console.log(prevsib)
+</script>
+</body>
+</html>

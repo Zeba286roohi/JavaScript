@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Rest and Spread Operators</h3>
+    <script>
+    //Normal
+    /*    const num1=[1,2,3]
+        const num2=[4,5,6];
+        const combineArray=num1.concat(num2);
+        console.log(combineArray);
+
+    //Rest Operator
+        const combineArrayRest=[...num1,...num2];
+        console.log(combineArrayRest)
+    //function rest
+        function greet(...name){
+            console.log('Hello',name.join(' '));
+        }
+        greet('John','harry','Sam')
+    //Extract an array and object
+    //Normal
+        const arr=[1,2,3,4,5];
+        const first=arr[0];
+        const rest=arr.slice(1);
+        console.log(first);
+        console.log(rest)
+    //rest with array extaction
+        const[firstarr,...restarr]=arr;
+        console.log(firstarr);
+        console.log(restarr);
+    //obj
+        const person={
+            name:'John',
+            age:23,
+            address:'Telengana'
+        }
+        const{name,...details}=person
+        console.log(name);
+        console.log(details)*/
+/*Spread Operators */
+    //copy array
+        const arr=[1,2,3,4,5];
+        const copyarr=arr.slice();
+        console.log(copyarr);
+    //spread
+        const spreadarr=[...arr];
+        console.log(spreadarr)
+    //expand arry and object
+        const arr1=[1,2,3];
+        const exparr=[...arr1,4,5,6];
+        console.log(exparr);    
+    //object
+        const person={
+            name:'John',
+            age:23
+        }
+        const newObj={...person,city:'Telengana'};
+        console.log(newObj);
+    
+    </script>
+</body>
+</html>

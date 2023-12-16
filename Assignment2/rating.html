@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rating</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+            background: linear-gradient(to top,#e78c0e,#7a084c);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .rating{
+            background: transparent;
+            /* background: rgb(26, 22, 22); */
+            display: inline-block;
+           position: relative;
+           padding: 25px 50px 35px;
+           border-radius: 25px;
+           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1{
+            color:black;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .srating{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .srating i{
+           
+            color:#7a084c;
+            font-size: 35px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .srating i.active{
+            color: darkgoldenrod;
+        }
+        .norating{
+            color: black;
+            margin-top: 20px;
+        }
+        
+        </style>
+</head>
+<body>
+    <!-- Create a program to give dynamic rating with JS -->
+    
+    
+    <div class="rating">
+        <h1>Dynamic Rating </h1>
+        <div class="srating">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+    </div>
+        <div class="norating"><center>Share Your Experience</center></div>
+    </div>
+   
+    <script>
+        const star=document.querySelectorAll('.srating i')
+        star.forEach((a,ind)=>{
+            a.addEventListener('click',()=>{
+                star.forEach((a,i)=>{
+                    ind>=i?a.classList.add('active'):a.classList.remove("active")
+                   
+                })
+            })
+        })
+    </script>
+</body>
+</html>

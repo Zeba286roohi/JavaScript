@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Exampe of set time out and set time interval</h3>
+    <script>
+        console.log('Starts')
+        setTimeout(()=>{
+            console.log('This will print after 2 second')
+        },2000);
+        console.log("Ends")
+    //set time interval
+        let count=0;
+        function increment(){
+            console.log('count is:',count++);
+        }
+        increment()
+    </script>
+</body>
+</html>

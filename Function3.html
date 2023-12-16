@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Function scope:
+            // function scope(){
+            //     var a='This is funcion scope';
+            //     console.log(a);
+            // }
+            // scope();
+            //console.log(a); this throws an error
+   //Call stack
+        function  first(){
+                console.log('first callstack');
+                second();
+            }
+            function second(){
+                console.log('second callstack')
+            }
+        first()
+    //pure function
+        function pure(a,b){
+            return a+b;
+        }
+        console.log(pure(2,3));
+
+        let res=0;
+        function impure(a,b){
+            res=a+b;
+            return res;
+        }
+        const sum=impure(4,7);
+        console.log(sum);
+        console.log(res);
+    //Closure
+        function outerfunction(){
+            var outer='This is outer func'
+        function innerfunction(){
+            console.log(outer)
+        }
+        return innerfunction()
+
+     }
+        outerfunction()
+//closure
+        function outerfun(outer)
+        {
+           return function innerfun(inner){
+                console.log(outer+inner);
+            }
+             //innerfun('hello')
+        }
+        const example=outerfun(3);
+        example(6);
+//recursive function
+        // function recursive(action){
+        //     console.log(`This code is ${action}`);
+        //     recursive(action);
+        // }
+        // recursive('Running');
+
+//recursive with range to stop
+        function resrange(n){
+            if(n===0){
+                console.log('Task completed');
+                return
+            }
+            console.log('the code is running')
+            resrange(n-1);
+        }
+        resrange(5);
+    </script>
+</body>
+</html>

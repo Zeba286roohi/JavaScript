@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of ECMA SCRIPT</h3>
+    <script>
+       /* const a='John';
+        console.log(a);
+        a='Sam';
+        console.log(a);
+        const b;
+        b='FSD';
+        console.log(b)*/
+    //let
+       /* let name='John';
+        console.log(name);
+        name='Sam';
+        console.log(name);
+        let age;
+        age=23;
+        console.log(age);*/
+    //var
+        /*var name='John';
+        console.log(name);
+        name='Sam';
+        console.log(name);
+        var age;
+        age=23;
+        console.log(age);*/
+//Hoistng in JS...
+//variable hositing
+      /* console.log(a);
+        var a=5;
+        console.log(a);//undefine
+//function hoisting
+       hositingVar()
+        function hositingVar(){
+            console.log('This is hositing with var');
+        }
+//block scope
+        if(true){
+            console.log(a)
+            var a=10;
+            console.log(a)
+        }*/
+
+//let hoisting
+        /*console.log(b);
+        let b=15;
+        console.log(b)//Reference error
+//funtion hositing
+        functionLet();
+        let functionLet=function(){
+            console.log("This is a function from let");
+        }
+//block scope
+        if(true){
+            console.log(b)
+            let b=20;
+            console.log(b)
+        }*/
+//const hoisting
+        /*console.log(c)
+        const c=25;
+        console.log(c)
+//fucntion
+        functionConst()
+        const functionConst=function(){
+            console.log('This is from const')
+        }
+//block scope
+        if(true){
+            console.log(c)
+        const c=30;
+        console.log(c)
+        }*/
+
+//block scope
+/*
+    function exampBlock(){
+            var z=10;
+            if(true){
+                var z=15;
+                console.log(z);
+            }
+            console.log(z)
+    }
+    exampBlock()
+    function exampLet(){
+        let a=20;
+        if(true){
+            let a=25;
+            console.log(a)
+        }
+        console.log(a)
+    }
+    exampLet()*/
+//interview question
+  /* for(let i=0;i<5;i++){
+        setTimeout(function(){
+            console.log(i);
+        },i*1000)
+    }
+    for(var i=0;i<5;i++){
+        setTimeout(function(){
+            console.log(i);
+        },i*1000)
+    }*/
+//Destructing wwith array and object
+    const num=[1,2,3]
+    const [p,q,r]=num;
+    console.log(p);
+    console.log(q);
+    console.log(r);
+    const person={
+        name:'John',
+        age:23,
+        address:'Telengana'
+    }
+  const{name,age}=person;
+  console.log(name,age)
+    </script>
+</body>
+</html>

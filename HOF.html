@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [1, 2, 3, 4];
+        const square = num => num * num;
+        const squaredNumbers = numbers.map(square);
+        console.log(squaredNumbers); // Output: [1, 4, 9, 16]
+
+        const numbers1 = [1, 2, 3, 4, 5];
+        const isEven = num => num % 2 === 0;
+        const evenNumbers = numbers1.filter(isEven);
+        console.log(evenNumbers); // Output: [2, 4]
+
+//fuction as arg
+        function greet(name,greetfun){
+            return greetfun(name);
+        }
+        const say=a=>`Hello ${a}`
+        console.log(greet("Harry",say));
+    //TDZ
+    {
+    console.log(a);
+
+    //Temporal dead zone:cannot access
+    //Temporal dead zone:cannot access
+    //Temporal dead zone:cannot access
+    //Temporal dead zone:cannot access
+    //Temporal dead zone:cannot access
+    let a="TDZ example";//Starts TDZ
+    console.log(a);
+    //Access the elemt
+    //Access the elemt
+    //Access the elemt
+
+    }
+    
+    </script>
+</body>
+</html>

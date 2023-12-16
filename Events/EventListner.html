@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Add Event Listener examples</h3>
+    <!-- mouseevent -->
+        <p class="hovertext">Mouse Event with add Listener</p>
+    <!-- mousseclick -->
+        <p class="text">Example of mouse click</p>
+        <button class="btntext">Click me</button>
+    <!-- keyboardevent -->
+        <p>Example of keyboard event</p><br /><br />
+   <!-- onsubmit -->
+        <form id="forminput">
+            <input type="text" id="text1" placeholder="write anything...">
+            <button id="submit">Submit</button>
+        </form>
+    <!-- doubleclick -->
+        <p id="demo">Double click to change text</p>
+        <script>
+            const texthover=document.querySelector('.hovertext');
+            texthover.addEventListener('mouseover',()=>{
+               texthover.style.color='aqua';
+            })
+            texthover.addEventListener('mouseout',()=>{
+                texthover.style.color='green';
+            })
+        //keyboard event
+            document.addEventListener('keydown',(event)=>{
+                console.log('Keydown',event.key)
+            })
+            document.addEventListener('keyup',(event)=>{
+                console.log('Key Up',event.key)
+            })
+        //onsubmit
+            const text_input=document.querySelector('#forminput')
+            text_input.addEventListener('submit',()=>{
+                document.write('Form submitted successfully');
+            })
+        //doubleclick
+            const dbl=document.querySelector('#demo')
+            dbl.addEventListener('dblclick',()=>{
+                dbl.textContent='Text changed!';
+            })
+        </script>
+</body>
+</html>

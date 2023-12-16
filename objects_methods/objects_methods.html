@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+//Create an object
+   /* const person={
+        fname:'John',
+        lname:'Doe',
+        age:'23'
+    }
+    let result="";
+    for(let x in person){
+        result+=person[x]+" "
+    }
+    document.getElementById('demo').innerHTML=result;*/
+//adding an object
+    /*const person={
+            fname:'John',
+            lname:'Doe',
+            age:'23'
+        }
+        person.nationality="Indian";
+        document.getElementById('demo').innerHTML=person.fname + "is"+person.nationality+ ".";*/
+//delete an object
+    /*const person={
+            fname:'John',
+            lname:'Doe',
+            age:'23',
+            address:'Telengana'
+        }
+        delete person.address;
+        document.getElementById('demo').innerHTML=person.fname +" is from "+person.address;*/
+//nested object
+        /*const person={
+                    fname:'John',
+                    lname:'Doe',
+                    age:'23',
+                    courses:{
+                        course1:"DS",
+                        course2:"FSD",
+                        course3:"DSA"
+                    }
+                }
+            document.getElementById('demo').innerHTML=person.courses.course2;*/
+//Object Display:Object.values()
+        /*const person={
+                    fname:'John',
+                    lname:'Doe',
+                    age:'23'
+                }
+                document.getElementById('demo').innerHTML=Object.values(person);*/
+//JSON.stringify
+       /* const person={
+                    fname:'John',
+                    lname:'Doe',
+                    age:'23'
+                }
+                document.getElementById('demo').innerHTML=JSON.stringify(person)*/
+//Stringfy Dates
+        /*const person={
+                    fname:'John',
+                    lname:'Doe',
+                    age:'23',
+                    today:new Date()
+                }
+                document.getElementById('demo').innerHTML=JSON.stringify(person)*/
+ //Accessing propeties:get and set()     
+               /* const student={
+                    fname:"Sam",
+                    get getName(){
+                    return this.fname;
+                }
+            }
+             
+               document.write(student.fname);
+               document.write(student.getName)*/
+               //document.write(student.getName()) throws eror as u cannot access method
+    //set method..
+                 /*const student={
+                    fname:"John",
+                    set setName(name){
+                        this.fname=name
+                    }
+                }
+               // document.write(student.fname);
+                student.setName='Harry';
+                document.write(student.fname);*/
+    //object prototypes:
+    //hasownproperty
+           /* var movie={
+                name:'avenger endgame',
+                genre:'super hit'
+            }
+            var song={
+                name:'Robert Harry'
+            }
+            console.log(movie.hasOwnProperty('name'));
+            console.log(movie.hasOwnProperty('type'));
+            console.log(song.hasOwnProperty('name'));*/
+   //object key
+            /*const person={
+                name:'john',
+                age:23,
+                job:'Engineer'
+            }
+            const result=Object.keys(person).includes('job');
+            console.log(result)*/
+   //objectsetprototype
+        /*let mamal={
+            eat:'plant'
+        } 
+        let rabbit={
+            jump:true
+        } 
+        Object.setPrototypeOf(rabbit,mamal);
+        console.log(rabbit.eat);
+        console.log(rabbit.jump)    */ 
+    //object freeze
+        let person1={
+            name:'John',
+            age:23,
+            address:'telengna'
+        } 
+        Object.freeze(person1);
+        person1.name='Sam';
+        console.log(person1); 
+        let numbers=[1,2,3];
+        Object.freeze(numbers);
+        //   numbers.push(4);
+        numbers[0]=5;
+        console.log(numbers);
+</script>
+</body>
+</html>

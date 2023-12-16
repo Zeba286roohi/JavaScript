@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .error {
+          color: red;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>Form Validation Example with Regex</h2>
+      <form id="myForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error"></span>
+    
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <script>
+        function validateForm() {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          // Reset error messages
+          document.getElementById("usernameError").innerHTML = "";
+          document.getElementById("passwordError").innerHTML = "";
+          // Regex patterns
+          var usernamePattern = /^[a-zA-Z0-9_]{3,20}$/; // Alphanumeric with underscores, 3 to 20 characters
+          var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // At least 8 characters, one lowercase, one uppercase, one digit
+          // Validate username
+          if (!usernamePattern.test(username)) {
+            document.getElementById("usernameError").innerHTML = "Invalid username format";
+            return false;
+          }
+          // Validate password
+          if (!passwordPattern.test(password)) {
+            document.getElementById("passwordError").innerHTML = "Invalid password format";
+            return false;
+          }
+          // If everything is valid, allow the form to be submitted
+          return true;
+        }
+        </script>
+</body>
+</html>

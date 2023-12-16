@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//class
+      /*  class Person{
+            constructor(name){
+                this.name=name;
+            }
+            study(){
+                console.log(`Hello ${this.name} is good in his study`);
+            }
+        }
+       const a=new Person('John');
+       a.study()*/
+//object
+       /* let person={
+            firstName:'John',
+            lastName:'Doe',
+            age:23,
+            greet:function(){
+                console.log(`Hello  my name is ${this.firstName} ${this.lastName}`);
+            }
+            
+        }
+      person.greet();*/
+//prototype
+       /* function Person(name,age){
+            this.name=name;
+            this.age=age
+        }
+        Person.prototype.study=function(){
+            console.log(`Hello my name is ${this.name} and my age is ${this.age}`);
+        }
+     let objpro=new Person('John',23);
+     objpro.study()*/
+
+//constructor
+     /*   class Rectangle{
+            constructor(length,breadth){
+                this.length=length;
+                this.breadth=breadth
+            }
+            area(){
+                console.log(`Area of rectangle ${this.length*this.breadth}`);
+            }
+          
+        }
+        const b=new Rectangle(5,7);
+        b.area();*/
+//static
+       /* class Operators{
+            static add(a,b){
+                return a+b
+            }
+            static sub(a,b){
+                return a-b
+            }
+
+        }
+        console.log(Operators.add(5,3));
+        console.log(Operators.sub(4,2));*/
+//Encapsulation
+       /* class Bank{
+            constructor(account,balance){
+                this.account=account;
+                this.balance=balance;
+            }
+            getBalance(){
+                console.log(`Balance is ${this.balance}`);
+            }
+            deposit(amount){
+                this.balance+=amount;
+            }
+            withdraw(amount){
+                if(amount<=this.balance){
+                    this.balance-=amount
+                }
+                else{
+                    console.log('Insufficient amount')
+                }
+            }
+        }
+        let myacc=new Bank('john',1000);
+        console.log(myacc.getBalance());
+        myacc.deposit(500);
+        console.log(myacc.getBalance());
+        myacc.withdraw(500);
+        console.log(myacc.getBalance())*/
+//Inheritance
+       /* class Shape{
+            constructor(color){
+                this.color=color;
+            }
+            draw(){
+                console.log(`Draw a ${this.color} in a color`)
+            }
+        }
+        class Circle extends Shape{
+            constructor(color,radius){
+            super(color)
+                this.radius=radius
+            
+        }
+            draw(){
+                console.log(`Draw a ${this.color} and with ${this.radius}`);
+            }
+            getArea(){
+                return Math.PI*Math.pow(this.radius,2);
+            }
+        }
+        let myCircle=new Circle('blue',4);
+       console.log(myCircle.draw());
+       console.log(myCircle.getArea());*/
+//polymorphism
+       /* class Shape{
+            draw(){
+                console.log("Drawing a shape");
+            }
+        }
+        class Circle extends Shape{
+            draw(){
+                console.log('Drawing a circle');
+            }
+        }
+        class Square extends Shape{
+            draw(){
+                console.log('Drawing a square');
+            }
+        }
+        function drawShape(shape){
+            shape.draw();
+        }
+        let circle=new Circle();
+        let sq=new Square();
+        drawShape(circle);
+        drawShape(sq)*/
+//Abstraction
+        class RemoteControl {
+        constructor(device) {
+            this.device = device;
+        }
+        turnOn() {
+            this.device.turnOn();
+        }
+
+        turnOff() {
+            this.device.turnOff();
+        }
+        }
+        class TV {
+        turnOn() {
+            console.log('TV is ON.');
+        }
+
+        turnOff() {
+            console.log('TV is OFF.');
+        }
+        }
+        let tvRemote = new RemoteControl(new TV());
+        tvRemote.turnOn(); // Output: TV is ON.
+        tvRemote.turnOff(); // Output: TV is OFF.
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of for loop</h3>
+    <script>
+        for (let i=0;i<10;i++){
+            console.log(i)
+        }
+    //print even numbers
+    for(let i=0;i<=10;i+=2){
+        console.log(i)
+    }
+    //odd numbers
+    for(let i=1;i<=10;i+=2)
+        {
+            console.log(i)
+        } 
+//by taking input from users
+    //  let n=prompt('Enter the number')
+    // for (let i=0;i<=n;i++){
+    //                 console.log(i);
+    //     }
+//printing multiplication table.
+    // let num=prompt('Enter the number of your choice');
+    // if(isNaN(num)){
+    //     console.log('it not a valid number');
+    // }else{
+    // for (let i=1;i<=10;i++){
+    //     let res=num*i;
+    //     console.log('Multiplication table is',num+ "x"+i+'='+res);
+    // }
+    // }
+//array
+        // const colors = ['red', 'green', 'blue'];
+        // for (let index = 0; index < colors.length; index++) {
+        // console.log(colors[index]);
+        // }
+
+//For in loop
+        const colors=['red','green','orange'];
+        for (let index in colors) {
+        console.log(index + ': ' + colors[index]);
+        }
+//for in objects
+        // const person={name:'john',age:23,occupation:'engineer'}
+        // for(let key in person){
+        //     console.log(person[key])
+        // }
+//for in strings
+        const a='hello world';
+        for (let char in a){
+            console.log(char)
+        }
+//For of Loop
+        const fruits = ['apple', 'banana', 'orange'];
+
+        for (let fruit of fruits) {
+        console.log(fruit);
+        }
+//for of object is not iterable
+        // const person={name:'john',age:23,occupation:'engineer'}
+        // for(let key of person){
+        //     console.log(person[key])
+        // }
+//for of string
+const b='hello world';
+        for (let char in b){
+            console.log(char)
+        }
+   </script>
+</body>
+</html>

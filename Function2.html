@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Arrow function</p>
+    <p id='demo'></p>
+    <script>
+        let add=(x,y)=>x+y;
+        let mul=(x,y)=>x*y;
+        console.log(add(2,3));
+        console.log(mul(3,7));
+    //arrow function prints
+        let sub=(x,y)=>x-y;
+        document.write(sub(13,10));
+        // alert(sub(10,5));
+        document.getElementById('demo').innerHTML=sub(5,3);
+    //arrow with string
+        let name=()=>"hello world";
+        console.log(name());
+    //astring with para
+        let greet=(name)=>'Hello'+' '+name;
+        console.log(greet('John'));
+        let wish=(name)=>'Hello'+' '+`${name}`;//template literal
+        console.log(greet('Sam'));
+    //Default parameters
+         const cal = ( x, y, z = 30 ) => {
+        console.log( x + y + z);
+        }
+        cal( 10, 20 );   
+        cal(20,10,40) ;
+    //area of rectangle..l*b
+        let rect=(length=4,breadth=8)=>length*breadth;
+        console.log('Aread of rectangle is',`${rect()}`);
+        //taking input from user
+        let area=(length,breadth)=>`${length*breadth}`;
+        let a=prompt('Enter length');
+        let b=prompt('Enter Breadth');
+        console.log('Area of ',area(a,b));
+
+    //global and local scope
+        var global='Iam from global variabele';
+        function globalfn(){
+            console.log(global)
+        }
+        globalfn();
+        console.log(global);
+    
+    //local variable
+        function localfn(){
+            var local='Iam from local funcion';
+            console.log(local);
+        }
+        localfn();
+        //console.log(local);//cannot acces it outside of fucn
+    //Nested Funtion variable
+        function outerfn(){
+            var outer='Iam from outer funtion';
+        function inner(){
+            console.log(outer);
+        }
+        inner();
+        }
+        outerfn();
+    //Nested with parameters
+        function greeting(name){
+        function Inner(){
+            console.log('Hello '+name);
+        }
+    
+        Inner();
+        }
+        greeting('Harry');
+    //square n cube root with nested.
+        function mathOperation(x) {
+        function square() {
+            return x * x;
+        }
+        function cube() {
+            return x * x * x;
+        }
+        console.log("Square:", square());
+        console.log("Cube:", cube());
+        }
+        mathOperation(3);
+    //Anonymous functions
+        let addition=function(x,y){
+            return x+y;
+        }
+        console.log(addition(2,5));
+    //String with anonymous
+        let str=function(){
+            return 'Hello world';
+        }
+        console.log(str());
+    //Immediately Invoke Function Expression :IIFE
+
+        (function(){
+            console.log('Hello Iam from IIFE');
+        })();
+        
+
+    </script>
+</body>
+</html>

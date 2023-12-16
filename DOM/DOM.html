@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Diffrent types of DOm Methods</h3>
+    <!-- <p id="demo">Hello World</p> -->
+   <!--- <p id="myDiv" style="width: 100px; height: 100px; background-color: red;"></p>
+    <button onclick="myfunction()">Click me</button>
+    <p id="fontChange" style="font-size: 12px;">This is my paragraph to change font size</p>
+    <button onclick="fontSize()">Increase Font size</button>
+    <script>
+//document by getElementById
+        // const element=document.getElementById('demo')
+        // element.innerText='This is my Text here';
+//backround color
+        function myfunction(){
+            const ele=document.getElementById('myDiv');
+            ele.style.backgroundColor='blue';
+        }
+//font size change
+function fontSize(){
+    const ele_font=document.getElementById('fontChange');
+    ele_font.style.fontSize='36px';
+}
+
+    </script>-->
+    <!-- <h3>Get Element By class name</h3>
+    <p class="para">Paragrapg with class name</p>
+    <p class="para">Another paragraph</p>
+    <p class="myDiv" style="width: 100px; height: 100px; background-color: red;"></p>
+    <button onclick="myfun()">Click me</button>
+    <ul class='demo'>
+        <li class='child'>Red</li>
+        <li class='child'>Blue</li>
+        </ul>
+        <button onclick="listFun()">Change list</button>
+        <div class="para1">
+        <p class="mypara">Paragraph1</p>
+        <p class="mypara">Paragraph2</p>
+        <p class="mypara">Paragraph3</p></div>
+        <button onclick="paraFun()">Change Font size</button>
+    <script>
+        const elements=document.getElementsByClassName('para')
+        for(const element of elements){
+            element.innerText='This is my new paragraph';
+        }
+        function myfun(){
+            const item=document.getElementsByClassName('myDiv')
+            for(const items of item){
+                items.style.backgroundColor='blue';
+            }
+        }
+    //change the list item name
+        function listFun(){
+            const lista=document.getElementsByClassName('demo')[0]
+            lista.getElementsByClassName('child')[0].innerHTML='Pink';
+        }
+  //fontSize
+        function paraFun(){
+            const fontCh=document.getElementsByClassName('para1')[0]
+            // for(const font of fontCh)
+            // font.style.fontSize='32px';
+            fontCh.getElementsByClassName('mypara')[1].style.fontSize='32px';
+
+        }
+    </script> -->
+    <!-- <h3>getElementByTagName</h3>
+    <p>Example of tagName</p>
+    <div style="width: 100px; height: 100px; background-color: red;"></div>
+    <button onclick="myfun()">Click here</button>
+    <ul>
+        <li>Red</li>
+        <li>Blue</li>
+    </ul>
+    <button onclick="listfun()">Click here</button>
+    <script>
+        const element=document.getElementsByTagName('p')
+        for(const elements of element)
+        elements.innerText='Hello World';
+//background color change
+        function myfun(){
+            const items=document.getElementsByTagName('div')
+            for(item of items){
+                item.style.backgroundColor='blue';
+            }
+        }
+//list name chaneg
+        function listfun(){
+            const lists=document.getElementsByTagName('ul')[0]
+            lists.getElementsByTagName('li')[0].innerHTML='Pink';
+        }
+    </script> -->
+<!-- <h3>Example of Query Selector</h3>
+        <p>Paragraph without queryselector</p>
+        <p>Paragraph without queryselector</p>
+        <a href="www.google.com">Google</a>
+        <a href="www.google.com" target="_blank">Google</a>
+        <a href="www.google.com" target="_self">Google</a>
+        <p id="mydiv">Example of paragraph</p>
+        <script>
+        const element=document.querySelector('p')
+    // element.style.color='blue';
+        element.innerHTML='Paragrapg with Query selector';
+    //link change
+            const links=document.querySelector('a[target]')
+            links.style.border='10px solid red';
+    //text change
+            const para=document.querySelector('#mydiv')
+            para.innerHTML='New paragraph '
+</script> -->
+<h3>Example of queryselector all</h3>
+        <p>Paragrap1</p>
+        <p>Paragrap2</p>
+        <p>Paragrap3</p>
+        <form>
+            <input type='text' placeholder='name'>
+            <input type="password" placeholder="password here">
+            </form>
+        <p class="highlight">Paragraph of query selector</p>
+        <div class="highlight">Div with querySelector</div>
+        <img src="image.jpg">
+        <img src="'image1.jpg">
+        <img src="'image3.jpg">
+<script>
+        const paragraph=document.querySelectorAll('p')
+        // paragraph.forEach(par=>par.style.color='blue')
+        paragraph.forEach(para=>para.style.backgroundColor='red')
+    //form change
+        const forms=document.querySelectorAll('form input')
+        forms.forEach(form=>form.style.marginTop='60px')
+    //element with same class
+        const high=document.querySelectorAll('.highlight')
+        high.forEach(hi=>hi.style.fontWeight='bold')
+    //image with border.
+        const image=document.querySelectorAll('img')
+        image.forEach(img=>img.style.border='2px solid green')
+</script>
+</body>
+</html>

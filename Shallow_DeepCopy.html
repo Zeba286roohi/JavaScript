@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of shallow and deep copy</h3>
+    <script>
+//Primitive data
+        let orginalValue=10;
+        let copiedValue=orginalValue;
+        console.log(orginalValue);
+        console.log(copiedValue);
+        copiedValue=20;
+        console.log(orginalValue);
+        console.log(copiedValue);
+//Non primitive
+      /* let person={
+            name:'John',
+            age:23
+        }
+        let copiedPerson=person;
+        console.log(person);
+        console.log(copiedPerson);
+        copiedPerson.name='Sam';
+        console.log(person);
+        console.log(copiedPerson);*/ //return shallow copy
+//Deep copying the obj values
+/*let person_deep={
+            name:'John',
+            age:23,
+            greetName:function(){
+                return this.name;
+            }
+        }
+      let copiedPerson=JSON.parse(JSON.stringify(person_deep));
+      console.log(person_deep)
+      console.log(copiedPerson)
+      copiedPerson.name='Sam';
+      console.log(person_deep)
+      console.log(copiedPerson)*/
+//deepcopy object assign...
+/*let person_deep={
+            name:'John',
+            age:23,
+            greetName:function(){
+                return this.name;
+            }
+        }
+        let copiedPerson=Object.assign({},person_deep);
+        console.log(person_deep);
+        console.log(copiedPerson);
+        copiedPerson.name='Sam';
+        console.log(person_deep);
+        console.log(copiedPerson)*/
+    </script>
+</body>
+</html>

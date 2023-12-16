@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .calci{
+            border:1px solid rgb(0, 0, 0);
+            height:330px;
+            width:230px;
+            padding:10px;
+            background-color: dimgrey;
+            text-align: center;
+            margin-left: 560px;
+        }
+        .btn{
+            height:50px;
+            width:50px;
+            background-color: aqua;
+            font-size: 16px;
+        }
+	    .view{
+            height:40px;
+            width:206px;
+            background-color: cornflowerblue;
+            font-size: 20px;
+        }
+        table{
+            margin-left: 5px;
+        }
+    </style>
+</head> 
+<body>
+<h1> CALCULATOR</h1>
+ <div class= "calci">
+ <form name = "text">
+ <input class= "view" name = "view">
+ </form>
+ <table >
+    <tr> 
+        <td> <button class = "btn" onclick = "input('+')" >+</button> </td>
+        <td> <button class = "btn" onclick = "input('-')" >-</button> </td>
+        <td> <button  class = "btn"  onclick = "input('/')">/</button> </td>
+        <td> <button class = "btn" onclick = "input('*')" >X</button> </td>
+        </tr>	
+	<tr> 
+	    <td> <button class = "btn" onclick = "input(7)" >7</button> </td>
+	    <td> <button class = "btn"  onclick = "input(8)" >8</button> </td>
+	    <td> <button class = "btn"  onclick = "input(9)" >9</button> </td>
+	    <td> <button  class = "btn" onclick = "bspace()" >Back</button> </td>
+	</tr>	
+	<tr> 
+	    <td> <button class = "btn" onclick = "input(4)" >4</button> </td>
+	    <td> <button class = "btn" onclick = "input(5)" >5</button> </td>
+	    <td> <button class = "btn" onclick = "input(6)" >6</button> </td>
+        <td> <button class = "btn" onclick = "text.view.value = ' ' " >clr</button> </td>	    
+	</tr>	
+	<tr> 
+	    <td> <button class = "btn" value = "1" onclick = "input(1)" >1</button> </td>
+	    <td> <button class = "btn" value = "2" onclick = "input(2)" >2</button> </td>
+	    <td> <button class = "btn" value = "3" onclick = "input(3)" >3</button></td>
+	    <td rowspan = 5> <button class = "btn" style = "height: 104px" onclick = "equal()">=</button> </td>
+	</tr>
+	<tr>
+	    <td colspan = 2> <button class = "btn" style = "width: 104px" onclick = "input(0)" >0</button> </td>
+	    <td> <button class = "btn" onclick = "input('.')">.</button> </td>
+	</tr>
+	</table>
+ </div>
+ <script>
+    function input(num){
+        document.text.view.value =document.text.view.value + num;
+    }
+    function equal(){
+        var eql = document.text.view.value;
+        if(eql){
+           document.text.view.value = eval(eql)
+        }
+    }
+    function bspace(){
+        var bsp =document.text.view.value;
+        document.text.view.value = bsp.substring(0, bsp.length - 1); 
+    }
+ </script>
+ </body>
+ </html>
+
+ 

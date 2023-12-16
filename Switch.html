@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Switch statement</h3>
+    <script>
+        let day=prompt('Enter the day');
+        let message;
+        switch(day){
+            case 'monday':
+                message='This is the first day of week';
+                break;
+            case 'tuesday':
+                message='Second day of week';
+                break;
+            case 'wednesday':
+                message='This this third day of week';
+                break;
+            case 'thursday':
+            case 'friday':
+                message='this is the 5 day';
+                break;
+            case 'saturday':
+            case 'sunday':
+                message='weekend';
+                break;
+            default:
+                message='This is a regular day'
+        }
+        console.log(message);
+    </script>
+</body>
+</html>

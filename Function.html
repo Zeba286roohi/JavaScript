@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+  //Functions
+  //fucntion declaration
+    function hello(){
+        console.log('hello from function');
+    }
+    //function call or Invoke the function
+    hello()
+
+//Function Parameter and arguments
+        function greet(name){
+            console.log('Hi '+name+'Good Afternoon')
+        }
+        greet('John');
+        greet('Sam');
+//multiple parameters
+        function person(name,age,adress){
+            console.log('Name is :'+name  + "Age is:" +age +" Address is :"+adress);
+        }
+        person('Harry',25,'Telengana');
+//input from user
+        // function greet(name){
+        //             console.log('Hi '+name+'Good Afternoon')
+        //         }
+        // let a=prompt('Enter the name');
+        // greet(a)
+//function retun
+            function add(a,b){
+                return a+b;
+            }
+           let res= add(3,10);
+           console.log(res);
+//return string
+            function hello(name,age,address){
+                return "Hi "+name +"Age" +age+"Addrss"+address
+            }
+            let result=hello('John',23,'Telengana');
+            console.log(result);
+//Declaration and execution.
+//declare the function
+        function emp(id,name,salary){
+            return "Empid:"+id+"Empname:"+name+"Salaray:"+salary;
+        }
+        //function execution
+        let c=emp(201,'john',20000);
+        console.log(c);
+//inpput from user.
+        // function sum(a,b){
+        //     return a+b;
+        // }
+        // let A=prompt("Enter first number");
+        // let B=prompt("Enter second number");
+        // let d=parseFloat(A);
+        // let e=parseFloat(B);
+        // //function execution
+        // let f=sum(d,e);
+        // //function invokation
+        // console.log(f);
+
+//Default parameter
+    function mul(a,b=5){
+        return a*b;
+    }
+// console.log(mul(2))
+    console.log(mul(3,6))
+//power
+    function expo(base,power=2){
+        return Math.pow(base,power)
+    }
+    console.log(expo(6))
+//Strings.
+    function greet(name='John',message='welcome'){
+        return (`${message},${name}`)
+        // return (message+name);
+    }
+    console.log(greet())
+    console.log("Sam",'Hi')
+//area of circle
+    function circle(radius){
+        const pi=3.14;
+        return 2*pi*radius*radius;
+    }
+    // console.log(circle(5));
+    let number=parseInt(prompt("Enter radius"));
+    console.log(circle(number))
+
+//factorial of number 5!=5x4x3x2x1=120
+
+        function factorial(n) {   
+        if (n === 0 || n === 1) {
+            return 1;// 0 or 1
+        } else {
+            // Recursive case: return n multiplied by the factorial of n-1
+            return n * factorial(n - 1);
+        }
+        }                                                     
+
+        let factorialResult = factorial(5);
+        // Output the result
+        console.log(factorialResult); 
+
+//Reverse of string..
+        function reverseString(str){
+            return str.split('').reverse().join('');
+        }
+        let reverse=reverseString('Hello world');
+        console.log(reverse);
+  </script>
+
+</body>
+</html>

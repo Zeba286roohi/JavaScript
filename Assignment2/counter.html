@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top,pink,violet,aqua);
+        }
+        .container{
+            color: black;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid linear-gradient(to top,pink,violet,aqua);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            padding: 100px;
+            display: inline;
+        }
+        h1{
+            padding: 60px;
+            font-weight: normal;
+            letter-spacing: .125rem;
+            text-transform: uppercase;
+        }
+        input{
+           background:linear-gradient(to top,pink,violet);
+        }
+        button{
+            background:linear-gradient(to top,pink,violet);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            width: 100px;
+            height: 25px;
+        }
+        .birth{
+            color: darkmagenta;
+            font-size: 20px;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a program of Birthday/New Year counter  -->
+    
+    <div class="container">
+        <h1 id="headline">My Birthday counter</h1>
+        <input id="myDate" type="date">
+        <button id="startButton">Countdown</button>
+        <div id="value"></div>
+        <div id='countdown' class="birth"></div>
+    </div>
+    <script>
+        var sec = 1000;
+        var min = sec * 60;
+        var hour = min * 60;
+        var day = hour * 24;
+        var month = day * 30;
+        var timer;
+
+        initDate();
+
+        document.getElementById('startButton').addEventListener("click", function() {
+        document.getElementById('value').innerHTML = document.getElementById("myDate").value;
+        var splitValues = document.getElementById("myDate").value.split('-');
+        var end = new Date(splitValues[0], splitValues[1] - 1, splitValues[2]);
+        clearInterval(timer);
+        showRemaining(end);
+        timer = setInterval(showRemaining, 1000, end);
+        });
+
+        function showRemaining(end) {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = "It's My Birthday!...Uh-Oh!....";
+            return;
+
+        }
+
+        var months = Math.floor(distance / month);
+        var days = Math.floor((distance % month) / day);
+        var hours = Math.floor((distance % day) / hour);
+        var minutes = Math.floor((distance % hour) / min);
+        var seconds = Math.floor((distance % min) / sec);
+
+        document.getElementById('countdown').innerHTML = months + ' months ' + '<br>';
+        document.getElementById('countdown').innerHTML += days + ' days ' + '<br>';
+        document.getElementById('countdown').innerHTML += hours + ' hrs ' + '<br>';
+        document.getElementById('countdown').innerHTML += minutes + ' mins ' + '<br>';
+        document.getElementById('countdown').innerHTML += seconds + ' secs';
+        }
+
+        function initDate() {
+        var defaultDate = new Date();
+        var month;
+        if(defaultDate.getMonth() + 1 > 9) {
+            month = "" + (defaultDate.getMonth() + 1);
+        } else {
+            month = '0' + (defaultDate.getMonth() + 1);
+        }
+        document.getElementById("myDate").value = defaultDate.getFullYear() + '-' + month + '-' + defaultDate.getDate();
+        } 
+
+
+    </script>
+    
+</body>
+</html>

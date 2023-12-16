@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .highlight{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div id="parentList">
+        <ul>
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3</li>
+        </ul>
+    </div>
+<!-- finding and change the style of parent node -->
+    <div id="parntnode">
+        <p>Accesing the parent node</p>
+    </div>
+<!-- removing the childnode -->
+    <div id="parentContainer">Parent Nodes
+    <p id="removeChild">This paragraph will be removed</p>
+    <span>Another child node</span>
+</div>
+<!-- accessing sibling nodes -->
+<div id="first">
+    <p>First Chikd node</p>
+</div>
+<div id="second">
+    <p>Second child node</p>
+</div>
+    <script>
+        var elements=document.getElementById('parentList')
+        var child=elements.childNodes;
+        console.log('Child list node:',child)
+//styking parent node
+        var ele_par=document.querySelector('p')
+        var parent_node=ele_par.parentNode;
+        console.log('parent node',parent_node)
+        // var par=parent_node.style.fontWeight='bold';
+        // console.log(par)
+         parent_node.classList.add('highlight')
+//remove the child node
+        var element=document.getElementById('removeChild')
+        element.parentNode.removeChild(element)
+//accessing sibling nodes
+        var first_child=document.getElementById('first')
+        var child=first_child.nextElementSibling;
+        child.classList.add('highlight');
+
+    </script>
+</body>
+</html>

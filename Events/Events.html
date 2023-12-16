@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+    <!-- <body onload="window.alert('Page is loading')"> -->
+
+    <h3>Example of Mouse,Keyboard,Forms and Windows events</h3>
+<!-- onclick -->
+        <input type="button" onclick="mouseclick()" value="You clicked the button">Click Me</button>
+<!-- onmouseover and out -->
+        <div id="mouseevent" onmouseover="handleover()" onmouseout="handleout()">Mouse Over and Out event</div>
+<!-- onfocus -->
+    <input type="text" id="focusevent" onfocus="handlefocus()">
+    <br />
+    <br />
+<!-- keyboardevent -->
+    <input type="text" id="input1" onkeydown="handledown()"> <br />
+    <script>
+//onclick
+        function mouseclick(){
+            alert('This is mouseclick event');
+        }
+//on mouse out &over
+        function handleover(){
+            document.getElementById('mouseevent').style.backgroundColor='blue';
+        }
+        function handleout(){
+            document.getElementById('mouseevent').style.backgroundColor='red';
+        }
+//onfocus
+        function handlefocus(){
+            document.getElementById('focusevent').style.backgoundColor='aqua';
+           
+        }      
+//onkeydown
+        function handledown(){
+            document.getElementById('input1')
+            alert('Pressed the key');
+        }
+//onload
+        document.write('Onload event');
+    </script>
+</body>
+</html>

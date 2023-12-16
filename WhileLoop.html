@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of While loop</h3>
+    <script>
+        // let count=0;
+        // while (count < 5) {
+        // console.log(count);
+        // count++;
+        // }
+//taking input
+    // let num=prompt("Enter the numbe");
+    // let c=0;
+    // while(c<num){
+    //     console.log(c);
+    //     c++;
+    // }
+//multiple table
+//     let n=prompt('Enter the number');
+//     let i=1;
+//     while(i<=10){
+//         let res=n*i;
+//         console.log('multiplication of ',res);
+//         i++;
+//     }
+// 
+//even numbers
+        // let a=prompt('Enter the number');
+        // let j=0;
+        // while(j<=a){
+        //     console.log(j);
+        //     j+=2;
+        // }
+//count down with for loop
+// let k=prompt('Enter the number');
+// for (let j=i;j>=0;j--){
+//     console.log(j)
+// }
+//while loop
+    // let k=10;
+    // while(k>=0){
+    //     console.log(k);
+    //     k--;
+    // }
+//Do while loop
+
+    let i=1;
+    do{
+        console.log(i);
+        i++;
+    }while(i<=5)
+//Postive or negative
+        let userInput;
+        let validInput = false;
+        do {
+            userInput = prompt("Enter a positive number:");
+            
+            if (userInput && !isNaN(userInput) && parseInt(userInput) > 0) {
+                validInput = true;
+            } else {
+                alert("Invalid input. Please enter a positive number.");
+            }
+        } while (!validInput);
+        console.log("You entered a valid positive number:", userInput);
+</script>
+</body>
+</html>

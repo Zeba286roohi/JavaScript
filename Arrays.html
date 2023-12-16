@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Arrays in js</h3>
+    <script>
+//Representation of Array:
+        let fruits = ['apple', 'banana', 'orange'];
+        let numbers = new Array(1, 2, 3, 4, 5);
+        console.log(fruits,numbers)
+//Acceesing array:Elements in an array can be accessed by their index, starting from 0.
+        let access=['apple', 'banana', 'orange'];
+        let res=access[2];
+        console.log(res)
+//Length:The length property returns the number of elements in the array.
+        let len=['apple', 'banana', 'orange'];
+        console.log(len.length)
+//Adding element:push-Adds one or more elements to the end of an array.
+        let pus=len.push('mango');
+        console.log(len)
+//Adds one or more elements to the beginning of an array.
+        let un=len.unshift('Kiwi','Pear');
+        console.log(len)
+//removing:pop: Removes the last element from an array.
+        let a=len.pop();
+        console.log(len)
+//shift: Removes the first element from an array.
+        let b=len.shift()
+        console.log(len)
+//slice: Returns a shallow copy of a portion of an array.
+    //    let c=['apple', 'banana', 'orange','Mango','Kiwi'];  
+       let number=[1,2,3,4,5,8,9]
+        // let sli=number.slice(1,3);
+        //  let sli=number.slice(3);
+        //  let sli=number.slice(-5,-2);
+         let sli=number.slice(-6);
+//splice: Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+        // let spli=number.splice(2,0,'a','b');
+        let spli=number.splice(2,0,'a');
+        console.log(number)
+//concat method
+        let fruit=['apple','melon','kiwi'];
+        let con=['mango','pear'];
+        let c=fruit.concat(con);
+        console.log(c);
+//to string
+        let d=number.toString()
+        console.log(d,typeof d);
+//The sort() method sorts an array alphabetically.
+        // let sor=fruit.sort()
+        let num=[0,-9,-11,89,6,4,3,90,80,34];
+        let sor=num.sort((a,b)=>a-b)
+        document.write(sor +"<br>")
+        //desc sort
+        let sordes=num.sort((a,b)=>b-a)
+        document.write(sordes)      
+//reverse
+        let rev=num.reverse()
+        console.log(rev)
+
+
+
+
+    </script>
+</body>
+</html>

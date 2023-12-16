@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Call bind and apply</h3>
+    <p id="demo"></p>
+    <script>
+//Call
+       /* let person1={
+            firstName:'John',
+            lastName:'Doe'
+        }
+        let person2={
+            firstName:'Sam',
+            lastName:'Harry'
+        }
+        let person={
+            fullName:function(){
+                return this.firstName+" "+this.lastName;
+            }
+        }
+        document.getElementById('demo').innerHTML=person.fullName.call(person2);*/
+//Bind...
+       /* let person={
+            firstName:'John',
+            greet:function(){
+                document.write(`Hello ${this.firstName}`)
+            }
+
+        }
+        let bindPerson=person.greet.bind(person);
+        bindPerson();*/
+//Apply 
+        let person={
+            name:'John'
+        }
+        function greet(message){
+            document.write(message+' '+this.name)
+        }
+        greet.apply(person,['Hi,Hello'])
+    </script>
+</body>
+</html>

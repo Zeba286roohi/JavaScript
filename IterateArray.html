@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>iterating arrays</h3>
+    <script>
+        let num=[1,2,3,4,5];
+        let dubnum=num.map(dbl=>dbl*2);
+        console.log(dubnum);
+    //changing string to upper case
+        let str=['apple','mango','banana'];
+        let strcha=str.map(fruits=>fruits.toLocaleUpperCase());
+        console.log(strcha);
+    //extract the obj
+        let students=[
+            {id:1,name:'john',grade:'A'},
+            {id:2,name:'Sam',grade:'B'},
+            {id:3,name:'Harry',grade:'C'}
+        ];
+        let res=students.map(student=>student.name);
+        //multiple obj display
+        let result=students.map(student=>({id:student.id,name:student.name,grade:student.grade}));
+        console.log(result)
+        // console.log(res)
+    //radius cirlce with obj
+        let circle=[
+            {radius:3},
+            {radius:5},
+            {radius:7}
+        ];
+        let radius=circle.map(rad=>Math.PI*Math.pow(rad.radius,2));
+        console.log(radius)
+
+//key value
+        let obja=[
+            ['a',2],
+            ['b',3],
+            ['c',5]
+        ];
+        let obj_b=obja.map((alp,index)=>({key:index+1,value:alp[0]}));
+        console.log(obj_b);
+//key_value with string
+        let countries=['usa','india','aus'];
+        let cont=countries.map((country,index)=>({key:index+1,value:country}));
+        console.log(cont)
+//FoREach
+        let fruits=['apple','mango','banana'];
+        fruits.forEach(fruit=>{
+            console.log(fruits)
+        })
+//objecr with forEach
+        let students_for=[
+            {id:1,name:'john',grade:'A'},
+            {id:2,name:'Sam',grade:'B'},
+            {id:3,name:'Harry',grade:'C'}
+        ];
+         students_for.forEach(studenta=>{
+            studenta.grade='A+';
+        });
+        console.log(students_for);
+//add numbers in an array
+        let num1=[1,2,3,4,5];
+        let sum=0;
+        num1.forEach(value=>{
+            sum=sum+value;
+        });
+        console.log(sum);
+
+//filter method..
+        let number1=[1,2,3,4,5,6,7,8,9,10];
+        let even=number1.filter(num=>num%2===0)
+        console.log(even)
+//filterung string
+        let fruitsfi=['apple','mango','kiwi','bananan','melon'];
+        let filfruits=fruitsfi.filter(fil=>fil.length<=4);
+        console.log(filfruits);
+//filter obj
+        let studentsfil=[
+                {id:1,name:'john',grade:'A'},
+                {id:2,name:'Sam',grade:'B'},
+                {id:3,name:'Harry',grade:'C'}
+            ];
+        let fiStu=studentsfil.filter(val=>val.grade=='A');
+        console.log(fiStu)
+//find with numbers
+        let number1_fd=[1,2,3,4,5,6,7,8,9,10];
+        let fd_number=number1_fd.find(value=>value%2===0)
+            console.log(fd_number)
+//find with strings
+        let fruits_fd=['apple','mango','kiwi','bananan','melon'];
+        let fd_fruits=fruits_fd.find(val=>val.length>5)
+        console.log(fd_fruits)
+// fidn with obj
+        let students_fd=[
+                    {id:1,name:'john',grade:'A'},
+                    {id:2,name:'Sam',grade:'B'},
+                    {id:3,name:'Harry',grade:'C'},
+                    {id:4,name:'kiara',grade:'A'}
+                ];  
+        let fd_students=students_fd.find(val=>val.grade==='A')
+        console.log(fd_students)
+//Some methpd
+                let num_sm=[1,2,3,4,5,6,7,8,9,10];
+                let some_num=num_sm.some(num=>num>11);
+                console.log(some_num)
+//some string
+                let fruits_sm=['apple','mango','kiwi','bananan','melon'];
+                let sm_fruits=fruits_sm.some(fruits=>fruits.startsWith('b')||fruits.startsWith('B'));
+                console.log(sm_fruits)
+//some onject
+                let students_sm=[
+                    {id:1,name:'john',grade:'A'},
+                    {id:2,name:'Sam',grade:'B'},
+                    {id:3,name:'Harry',grade:'C'},
+                    {id:4,name:'kiara',grade:'A'}
+                ]; 
+                let sm_students=students_sm.some(students=>students.grade==='A');
+                console.log(sm_students)
+//reduce method
+
+        let num_re=[1,2,3,4,5,6,7,8,9,10]; 
+        let re_num=num_re.reduce((a,b)=>a+b)
+        console.log(re_num) 
+//reduce with array
+        let arr=[[1,2],[3,4],[5,6],[7,8]];
+        let arr_re=arr.reduce((a,b)=>a.concat(b))
+        console.log(arr_re)
+//combinatin codes
+        
+        let num_com=[1,2,3,4,5,6,7,8,9,10]; 
+        let com_num=num_com
+                .filter(number=>(number%2!==0))
+                .map(odd=>odd*odd);
+                console.log(com_num)
+//combination with obj
+            let product=[{name:'Laptop',price:300},{name:'Tablet',price:500},{name:'Phone',price:600}];
+            let prodyct_com=product
+                            .filter(product=>product.price<600)
+                            .map(prod=>`${prod.name},${prod.price}`)
+                            console.log(prodyct_com)
+
+    </script>
+</body>
+</html>

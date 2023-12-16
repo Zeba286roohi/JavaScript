@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of date and maths methods</h3>
+    <script>
+//Creating a Date Object:
+	const currentDate3 = new Date();
+	console.log(currentDate3);
+//Getting the Current Date and Time:
+	const currentDate2 = new Date();
+	console.log(currentDate2.toString());
+//Getting Specific Components of a Date:
+	const currentDate = new Date();
+	const year = currentDate.getFullYear();
+	const month = currentDate.getMonth(); // Months are zero-based (0-11)
+	const day = currentDate.getDate();
+	const hours = currentDate.getHours();
+	const minutes = currentDate.getMinutes();
+	const seconds = currentDate.getSeconds();
+    console.log(`Year: ${year}, Month: ${month + 1}, Day: ${day}, Time: ${hours}:${minutes}:${seconds}`);
+//Maths methods
+        const num=25;
+        let sq=Math.sqrt(num);
+        console.log(sq)
+//rounded num
+        const num1=3.1257867;
+        let rou=Math.round(num1)
+        console.log(rou)
+//Random
+        let ran=parseInt(Math.random()*10+1);
+        console.log(ran)
+//Question 1: How do you create an empty array in JavaScript?
+        let arr=[]//array literal
+        let arr1=new Array()//constructor method
+//Question 2: How do you add an element to the end of an array?
+        let arr2=[1,2,3]
+        let add=arr2.push(4);
+        console.log(arr2)
+//Question 3: How do you loop through an array in JavaScript?
+        let arr4=[1,2,3]
+        arr4.forEach(ele=>
+        console.log(arr4))
+
+    </script>
+</body>
+</html>

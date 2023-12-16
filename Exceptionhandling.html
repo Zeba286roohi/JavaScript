@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Exceptional handling</h3>
+    <input type="button" value="click me" onclick="myfunc()">
+    <script>
+        function myfunc(){
+            var a=100;
+            var b=0;
+            try{
+                if(b==0){
+                    throw "Cannot divided by Zero";
+                }else{
+                    var c=a/b;
+                    console.log(c);
+                }
+
+            }
+            catch(err){
+                alert("error"+err);
+            }
+        }
+    </script>
+</body>
+</html>

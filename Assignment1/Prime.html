@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function prime(a){
+        let prim = true;
+        if (a===0 ||a===1) {
+            console.log(`${a} is neither prime nor composite number.`);
+        }else if (a > 1) {
+            for (let i=2;i<a;i++) {
+                if (a%i== 0) {
+                prim=false;
+                break;
+            }}
+            if (prim) {
+                console.log(`${a} is a prime number`);
+            } else {
+                console.log(`${a} is a not prime number`);
+            }
+        }
+        }
+        let number =prompt("Enter a positive number: ");
+        let b=parseInt(number);
+        prime(b);
+
+    </script>
+</body>
+</html>

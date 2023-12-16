@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Currying...</h3>
+<script>
+//Normal
+   /* function multiply(a,b,c){
+        return a*b*c
+    }
+    console.log(multiply(2,3,4));*/
+//currying
+    function multiplycurry(a){
+        return function(b){
+            return function(c){
+                return a*b*c;
+            }
+        }
+    }
+    console.log(multiplycurry(4)(5)(6));
+//arrow function
+    const arrowcurry=(a)=>(b)=>(c)=>a+b+c;
+    const res=arrowcurry(1)(2)(3);
+    console.log(res);
+//string
+    function stringCurry(str1){
+            return function(str2){
+                return function(str3){
+                    return `${str1}${str2}${str3}`
+                }
+            }
+        }
+        const a=stringCurry("Hello");
+        const b=a('World');
+        const c=b('Good morning')
+        console.log(c);
+</script>
+</body>
+</html>

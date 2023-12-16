@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of String methods</h3>
+    <script>
+//Concate:You can concatenate strings using the + operator or the concat method.
+        let str1='Hello';
+        let str2='World';
+        console.log(str1+' '+str2);
+        let str3=str1.concat(' ,'+str2);
+        console.log(str3);
+
+//Length:The length property gives the length of the string.
+        let len='Hello  world';
+        console.log(len.length);
+
+//Accessing the char:Individual characters can be accessed using square brackets and zero-based indexing.
+        let str='Hello World';
+        console.log(str[5]);
+//Substring:The substring method extracts a portion of a string.
+        let str4=str.substring(0,5);
+        console.log(str4);
+        let str5=str.substring(6,9)
+        console.log(str5)
+//IndexOf:The indexOf method searches for a substring and returns the index of the first occurrence.
+        let str6=str.indexOf('o');
+        console.log(str6)
+//replce:The replace method replaces a specified substring with another
+        let rep=str.replace('World','Universe');
+        console.log(rep);
+//Case:The toUpperCase and toLowerCase methods change the case of the string.
+        let low=str.toLowerCase();
+        console.log(low);
+        let upp=str.toUpperCase()
+        console.log(upp)
+//Trim:The trim method removes leading and trailing whitespaces from a string.
+        let hello='            Hello              World     ';
+        let tri=hello.trim();
+        console.log(tri)
+//Convert:You can convert values to strings using the String constructor or the toString method.
+        let num1=45;
+        let con=num1.toString();
+        console.log( typeof con)
+        let conv=String(num1);
+        console.log(conv ,typeof conv)
+//Slice:Negative indices can be used to count from the end of the string.
+        let sli=str.slice(-8,-2);
+        console.log(sli)
+    </script>
+</body>
+</html>

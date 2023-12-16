@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #countdown{
+            color:#000;
+            display: inline-block;
+            font-size:40px;
+        }
+        #countdown div{
+            border:1px solid grey;
+            border-radius: 10px;
+            padding:10px;
+            width:150px;
+            display: inline-block;
+        }
+        #countdown div > span{
+            /* border:1px solid red; */
+            display:inline-block;
+            width:50px;
+            background-color: #000;
+            color:#fff;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <h1>NEW YEAR COUNTDOWN</h1>
+    <h3>TILL 2024</h3>
+    <div id='countdown'>
+        <div>
+            <span id="day"></span>
+            <p>Days</p>
+        </div>
+        <div>
+            <span id="hour"></span>
+            <p>Hours</p>
+        </div>
+        <div>
+            <span id="min"></span>
+            <p>Minutes</p>
+        </div>
+        <div>
+            <span id="sec"></span>
+            <p>Seconds</p>
+        </div>
+    </div>
+    <div id="countexp"> </div>
+   
+    <script> 
+        let dline=new Date('Jan 1, 2024 00:00:00').getTime();       
+        let t=setInterval(function (){     
+            let now=new Date().getTime();
+            let time=dline-now;            
+            
+            let days=Math.floor(time/(1000*60*60*24));
+            let hour=Math.floor((time%(1000*60*60*24))/(1000*60*60));
+            let minute=Math.floor((time%(1000*60*60))/(1000*60));
+            let second=Math.floor((time%(1000*60))/(1000));
+            
+            document.getElementById('day').innerHTML=days;
+            document.getElementById('hour').innerHTML=hour;
+            document.getElementById('min').innerHTML=minute;
+            document.getElementById('sec').innerHTML=second;
+            if (time<0){
+                clearInterval(t);
+                document.getElementById("countexp").innerHTML ='Expired..! HAPPY NEW YEAR.d';
+                document.getElementById('day').innerHTML='0';
+                document.getElementById('hour').innerHTML='0';
+                document.getElementById('min').innerHTML='0';
+                document.getElementById('sec').innerHTML='0';
+            }
+        },1000)
+    </script>
+</body>
+</html>

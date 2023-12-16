@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        padding: 5px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h3>Example of event bubbling and capturing</h3>
+    <div id="outer">
+        <button id="inner">Click me</button>
+    </div>
+    <ul id="parentList">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ul>
+    <!-- <script>
+//Event bubbling
+        document.getElementById('outer').addEventListener('click',()=>{
+            alert('You clicked the outer element');
+        })
+     
+        document.getElementById('inner').addEventListener('click',()=>{
+            alert('You clicked the inner element');
+        })
+        
+    </script> -->
+    <!-- <script>
+//Event Capturing
+        document.getElementById('outer').addEventListener('click',()=>{
+            alert('You clicked outer element')
+        },true)
+        document.getElementById('inner').addEventListener('click',()=>{
+            alert('You clicked inner element')
+        },true)
+    </script> -->
+<script>
+    document.getElementById('parentList').addEventListener('click',(event)=>{
+        if(event.target.tagName==='LI'){
+            alert(`You clicked ${event.target.textContent}`);
+        }
+    });
+
+
+</script>
+</body>
+</html>

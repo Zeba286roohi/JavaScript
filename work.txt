@@ -1,0 +1,14 @@
+-calculator-onclick events
+-stop watch-onclick and set time interval
+-noteapp-append child,query selectors
+
+
+
+-pop up with js(classlist)
+-qr code(classList)
+-light and dark mode
+-age calculator
+
+-form validation-arrow keys and regex
+
+random password generator
